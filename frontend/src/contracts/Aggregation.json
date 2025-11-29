@@ -1,0 +1,165 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_chatContract",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalMessages",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalLikes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalDislikes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalInteresting",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalNotInteresting",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "averageToxicity",
+            "type": "uint256"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct AggregationSepolia.PublicStats",
+        "name": "stats",
+        "type": "tuple"
+      }
+    ],
+    "name": "StatsUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "chatContract",
+    "outputs": [
+      {
+        "internalType": "contract ChatSepolia",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_messageId",
+        "type": "uint256"
+      }
+    ],
+    "name": "computePublicStats",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalMessages",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalLikes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalDislikes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalInteresting",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalNotInteresting",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "averageToxicity",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct AggregationSepolia.PublicStats",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getChatMood",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "_messageIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getTopMessages",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "topMessageIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "scores",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
