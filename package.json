@@ -1,0 +1,19 @@
+{
+  "name": "fhe-global-chat",
+  "version": "1.0.0",
+  "description": "Global Chat - Privacy-preserving chat with homomorphic encryption",
+  "scripts": {
+    "compile": "hardhat compile && node scripts/extract-abi.js",
+    "deploy:sepolia": "hardhat run scripts/deploy-sepolia.js --network sepolia",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd frontend && npm install"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.27.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
